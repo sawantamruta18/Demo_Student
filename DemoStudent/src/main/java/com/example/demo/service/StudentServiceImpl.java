@@ -28,4 +28,10 @@ public class StudentServiceImpl implements StudentService {
 		return sr.findAll();
 	}
 
+	@Override
+	public void addAll(List<Student> s) {
+		// TODO Auto-generated method stub
+		sr.saveAll(s);
+	}
+
 }

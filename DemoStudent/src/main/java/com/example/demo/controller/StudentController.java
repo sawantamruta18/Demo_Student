@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Student;
 import com.example.demo.service.StudentService;
 
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 @RestController
 public class StudentController {
 
@@ -25,5 +27,10 @@ public class StudentController {
 	@PostMapping("add")
 	public void addStudent(Student s) {
 		ss.add(s);
+	}
+	
+	@PostMapping("addAll")
+	public void addAllStudent( @RequestBody List <Student> s) {
+		ss.addAll(s);
 	}
 }

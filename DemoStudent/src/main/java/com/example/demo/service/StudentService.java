@@ -9,4 +9,5 @@ public interface StudentService {
 	void add(Student s);
 	List<Student>display();
 
+	void addAll(List<Student> s);
 }
